@@ -1,4 +1,5 @@
 class Api::Users::SessionsController < Devise::SessionsController
+  before_action :authenticate_user!,  only: :destroy
   skip_before_action :verify_signed_out_user
 
 def create
