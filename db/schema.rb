@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611174121) do
+ActiveRecord::Schema.define(version: 20180613163226) do
 
   create_table "authentication_tokens", force: :cascade do |t|
     t.string "body"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20180611174121) do
     t.datetime "updated_at", null: false
     t.index ["body"], name: "index_authentication_tokens_on_body"
     t.index ["user_id"], name: "index_authentication_tokens_on_user_id"
+  end
+
+  create_table "encrypted_files", force: :cascade do |t|
+    t.text "file"
+    t.string "file_name"
+    t.string "file_hash"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_encrypted_files_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
