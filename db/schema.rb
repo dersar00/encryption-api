@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180613163226) do
     t.text "file"
     t.string "file_name"
     t.string "file_hash"
+    t.string "user_email"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

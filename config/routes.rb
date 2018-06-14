@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     end
 
     post 'encrypted_files' => 'encrypted_files#create'
+    get 'encrypted_files' => 'encrypted_files#index'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
