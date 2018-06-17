@@ -4,7 +4,6 @@ class CreateEncryptedFiles < ActiveRecord::Migration[5.1]
       t.string :file
       t.text :file
       t.string :file_name
-      t.string :file_hash
       t.string :user_email
       t.integer :user_id
 
